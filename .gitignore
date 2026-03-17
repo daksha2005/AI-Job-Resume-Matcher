@@ -1,0 +1,16 @@
+# Environments
+.venv/
+env/
+__pycache__/
+*.py[cod]
+
+# Data & Large Files
+# We exclude the large CSV file to comply with GitHub's file size limits.
+# Users can download it from the Kaggle link provided in README.md.
+postings.csv
+
+# IDEs & System Files
+.vscode/
+.idea/
+.DS_Store
+*.swp
