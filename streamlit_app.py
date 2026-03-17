@@ -185,10 +185,12 @@ def main():
     # Load and index data
     jobs = []
     
-    # Optional: Load from CSV if exists
-    if os.path.exists("postings.csv"):
+    # Try to load either the sample or the full CSV
+    csv_file = "postings_sample.csv" if os.path.exists("postings_sample.csv") else "postings.csv"
+    
+    if os.path.exists(csv_file):
         try:
-            df = pd.read_csv("postings.csv").head(500)
+            df = pd.read_csv(csv_file).head(300)
             for i, row in df.iterrows():
                 jobs.append({
                     "id": f"k{i}",
